@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Koch Snowflake</title>
+  <link href="style.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<div class="content">
+<h1>Koch Snowflake</h1>
+  <p>This is an interactive simulation of a
+    <a href="https://en.wikipedia.org/wiki/Koch_snowflake" target="_blank">
+      Koch Snowflake</a>, a type of fractal. Use the sliders to increase or decrease the degree of recursion.</p>
+  <div class="sim-widget">
+  	<div id = "canvasdivone" class="canvasdiv" style="width:500px; height:500px;">
+  		<canvas id="canvasOne" width="500" height="500"></canvas>
+  	</div>
+	<div class="sliders">
+		Recursion degree:
+		<input type="range" min="0" max="8" step="1" value="4" id="recurSnowf" onchange="updateSnowf(this.value)"> <span id="n"></span><br>
+	</div>
+</div>
+<h2>Draw your own pattern</h2>
+<p>Here, you can input your own pattern. In the box, enter any combination of "F", "-", or "+" symbols to "draw forward", "turn right 60 degrees", or "turn left 60 degrees" respectively. This follows the <a href="https://en.wikipedia.org/wiki/Koch_snowflake#Representation_as_Lindenmayer_system">Lindenmayer system</a>. The default to create a Koch Snowflake fractal is "f-f++f-f".</p>
+<div class="sim-widget">
+	<div id = "canvasdivtwo" class="canvasdiv" style="width:500px; height:500px;">
+		<canvas id="canvasTwo" width="500" height="500"></canvas>
+	</div>
+	<div>
+		<div class="inputbox">
+			<p>Enter a pattern:</p>
+			<input name="patternText" type="text" value="f-f++f-f" id="patternTxt">
+			<button type="button" id="patternBttn" onclick="arbitButton()">Plot</button>
+		</div>
+		<div class="sliders2">
+			Recursion degree:
+			<input type="range" min="0" max="8" step="1" value="4" id="recurArbit" onchange="updateArbit(this.value)"> <span id="p"></span><br>
+		</div>
+	</div>
+</div>
+
+</div>
+<script src="./js/datatracking.js"></script>
+<script src="./js/koch.js"></script>
+<script src="./js/arbitrary.js"></script>
+</body>
+</html>

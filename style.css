@@ -1,0 +1,26 @@
+body {
+  font-family: Helvetica, sans-serif;
+}
+
+.content {
+	padding: 10px 20px;
+	max-width: 750px;
+	margin: 0 auto;
+}
+
+.sim-widget {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-column-gap: 20px;
+	align-items: center;
+}
+
+.sim-widget .canvasdiv {
+	background-color: #EEE;
+	border: 2px solid black;
+}
+
+.sim-widget .controls {
+	border: 2px solid black;
+	padding: 5px;
+}
